@@ -251,8 +251,6 @@ def print_statistics(content_list):
     total = calculate_total_words(content_list)
     print("Total word count: {}".format(total))
     append_csv(filename_output, "Total word count: {}".format(total))
-    
-
 
     total_unique_word_count = unique_word_count(content_list)
     print("Unique word count: {}".format(total_unique_word_count))
@@ -279,7 +277,7 @@ def print_statistics(content_list):
     
     
     to_write = []
-    to_write.append("Term, Term Frequency, Inverse Document Frequency, TF * IDF, Probability")
+    to_write.append("Term, Term_Frequency, Inverse_Document Frequency, TF * IDF, Probability")
     print("Term, Term Frequency, Inverse Document Frequency, TF * IDF, Probability")
     for token, count in highest_frequency_tokens.items():
         term_frequency = calculate_term_frequency(content_list, token)
